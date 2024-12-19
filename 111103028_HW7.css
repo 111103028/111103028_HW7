@@ -1,0 +1,189 @@
+body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: lightblue;
+			margin: 0;
+			padding: 0;
+			
+		}
+
+		.main-container{
+			background-color: white;
+			display: flex;
+			flex-wrap: wrap;
+			width: 1250px;
+			margin: 20px auto;
+			padding: 20px;
+			box-shadow: 3px 3px 3px;
+			border-radius: 10px;
+			box-sizing: border-box;
+			height: 1500px;
+		}
+
+		.left-panel{
+			
+			background-color: #ffd9dc;
+			height: 1350px;
+			margin-top: 0px;
+			width: 550px;
+			padding:10px;
+			display:flex;
+			flex-direction:column;
+			align-items:flex-start;
+			
+			box-sizing: border-box;
+
+		}
+
+		.left-panel div{
+			color: white;
+			margin-left: 0px;
+			margin-bottom: 80px;
+			margin-top: 0px;
+			border-left: 0px;
+		}
+
+		.photo-panel{
+			background-image: url('蠟筆小新.jpg');
+			background-size: cover;
+			background-position: top left;
+    		margin: 0;
+    		width: 300px;
+    		height:50% ;
+    		margin-bottom: 1px;
+		}
+
+		.text-content{
+			padding: 10px;
+			font-size: 16px;
+			line-height: 1.0;
+			margin-left: 35px!important;
+			padding-right: 10px !important;
+			font-size: 18px;
+			line-height: 1.2;
+		}
+
+		
+		.left-panel h1{
+			color: white;
+			text-align: center;
+			font-family: 標楷體;
+			align-self: center;
+			margin-top: 0px;
+			font-size: 48px;
+
+		}
+
+		.text-content h2 {
+ 		   margin-bottom: 5px;
+ 		   margin-left: 5px;
+ 		   font-size: 22px;
+		}
+
+		
+
+
+		.right-panel{
+			
+			background-color: white;
+			flex: 2;
+			padding: 20px;
+			box-sizing: border-box;
+			
+		}
+
+		.right-panel h1:first-of-type{
+			margin-top: 15px;
+			
+		}
+
+		.right-panel h1{
+			border-bottom: 2px solid dimgray;
+			padding-bottom: 5px;
+			margin-bottom: 30px;
+			text-align: left;
+			margin-top: 100px;
+			width: 80%;
+		}
+
+
+
+		.wordStyle{
+			display:block;
+	
+			font-size: 18px;
+			margin-bottom: 30px;
+		}
+
+		.wordStyle p{
+			margin: 0;
+			padding: 0;
+			line-height: 1.8;
+			
+			
+		}
+
+		.wordStyle a{
+			color: gray;
+			text-decoration: none;
+		}
+		
+		.wordStyle a:hover{
+			color: lightblue;
+			text-decoration: underline;
+		}
+
+		.imageStyle-container{
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			justify-content: space-between;
+			margin-bottom: 10px;
+		}
+		.imageStyle{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			width: 80px;
+		}
+
+		.imageStyle img{
+			max-width: 100%;
+			margin-bottom: 10px;
+		}
+
+		.imageStyle img:hover{
+			transform: scale(1.1);
+			transition: 0.5s;
+		}
+
+		.note {
+			font-size: 14px;
+			color: gray;
+			margin-top: 20px;
+		}
+
+		.music-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .music-item img {
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    .music-item a {
+      font-size: 14px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .music-item a:hover {
+      text-decoration: underline;
+    }

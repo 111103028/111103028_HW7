@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="111103028_HW7.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>111103028HW7</title>
+
+</head>
+<body>
+	<div class="main-container">
+
+		<div class="left-panel">
+			<div class="photo-panel" style="background: none;">
+				<img src="蠟筆小新.jpg" alt="蠟筆小新">
+			</div>
+
+
+
+			<h1 id="editable-name">林宜甄</h1>
+			<button id="edit-name-button">Edit</button>
+			
+
+			<div class="text-content">
+				<h2>關於我</h2>
+				<p>我是歷史三林宜甄，來自高雄，我平常喜歡看蠟筆小新，到目前為止我學過的程式有Java、Python、App Inventor、Microbit，對於學習程式還算有興趣</p>
+
+				<h2>聯絡方式</h2>
+				<a href="mailto:111103028@g.nccu.edu.tw"> 111103028@g.nccu.edu.tw </a></p>
+				<img src = "政治大學.png" alt = "桌面-政治大學" width = '300px' height = '100px'/>
+
+			</div>
+
+			
+		</div>
+
+		<div class="right-panel">
+			<h1>Education</h1>
+			<div class="wordStyle">
+				<p><strong>2023-</strong>國立政治大學</p>
+				<p><strong>2023-</strong>歷史學系</p>
+			    
+			</div>
+
+			<div class="wordStyle">
+				<p><strong>2021-</strong>高雄市立文山高中</p>
+			     <p>攝影社</p>
+			</div>
+
+			<div class="wordStyle">
+				<p><strong>2018-</strong>高雄市立民族國中</p>
+			</div>
+
+			<div class="wordStyle">
+				<p><strong>2015-</strong>高雄市立正興國民小學</p>
+			</div>
+
+
+			<h1>Homework List</h1>
+			<div class="wordStyle">
+				<p><strong>HW1-</strong><a href = "https://github.com/111103028/HW1">https://github.com/111103028/HW1</a>
+			</div>
+
+			<div class="wordStyle">
+				<p><strong>HW2-</strong><a href = "https://github.com/111103028/HW2">https://github.com/111103028/HW2</a>
+			</div>
+
+			<div class="wordStyle">
+				<p><strong>HW3-</strong><a href = "https://github.com/111103028/HW3">https://github.com/111103028/HW3</a>
+			</div>
+
+			<h1>Favorite music</h1>
+
+
+			<div id = "music-list">
+				<div class="imageStyle-container">
+				<div class ="imageStyle">
+				<img src = "youtube.jpg" alt = "桌面-youtube" width = "50px" height="50px"/></p>
+			    <a href = "https://youtu.be/kyxA6C0MyMY?si=peKiYJx1T9jDcRYp">我用什麼把你留住</a></p>
+			</div>
+
+			<div class="imageStyle">
+				<img src = "youtube.jpg" alt = "桌面-youtube" width = "50px" height="50px"/></p>
+				<a href = "https://youtu.be/CVobcKf9nns?si=JHQBy13pHDsHwrPl">玉珍</a></p>
+			</div>
+
+			<div class="imageStyle">
+				<img src = "youtube.jpg" alt = "桌面-youtube" width = "50px" height="50px"/></p>
+				<a href = "https://youtu.be/RKwqBjS_XY8?si=cAwkSoXBu43FYqH_">駕鶴西去</a></p>
+			</div>	
+
+			<div class="imageStyle">
+				<img src = "youtube.jpg" alt = "桌面-youtube" width = "50px" height="50px"/></p>
+				<a href = "https://youtu.be/8UNcuN917pA?si=sFVIEO2omU9HaY4K">王昭君</a></p>
+			</div>	
+
+
+			</div>
+			</div>
+			
+			<button id = "addMusic">add</button>
+			<div class="note">
+				<p>這些歌曲是我最近喜歡聽的音樂</p>
+				
+			</div>
+
+			
+
+
+		</div>
+		
+		
+
+	</div>
+
+
+
+	<script>
+  // 初始化函數
+  function initializeEditNameFunctionality() {
+    const nameElement = document.getElementById("editable-name");
+    const editButton = document.getElementById("edit-name-button");
+    let isEditing = false;//表示初始狀態是非編輯模式
+
+    // 設置按鈕點擊事件
+    editButton.addEventListener("click", function () {
+      if (isEditing) {
+        // 保存模式
+        const inputField = document.getElementById("name-input");
+        const newName = inputField.value; // 獲取輸入框的值
+        nameElement.textContent = newName; // 更新名稱顯示
+        nameElement.style.display = "block"; // 顯示名稱
+        inputField.remove(); // 移除輸入框
+        editButton.textContent = "Edit"; // 按鈕改為 "Edit"
+        isEditing = false; // 重置編輯狀態
+      } else {
+        // 編輯模式
+        const currentName = nameElement.textContent; // 獲取當前名稱
+        const inputField = document.createElement("input"); // 創建輸入框
+        inputField.type = "text";
+        inputField.id = "name-input";//設定輸入框的ID
+        inputField.value = currentName; // 預填當前名稱
+        nameElement.style.display = "none"; // 隱藏名稱
+        nameElement.parentNode.insertBefore(inputField, editButton); // 將輸入框插入到按鈕前
+        editButton.textContent = "Save"; // 按鈕改為 "Save"
+        isEditing = true; // 設置編輯狀態(進入編輯模式)
+      }
+    });
+  }
+
+  // 執行初始化函數
+  initializeEditNameFunctionality();
+
+
+  // 目標區域變數：定位音樂列表
+const musicList = document.getElementById("music-list");
+const addMusicButton = document.getElementById("addMusic");
+
+addMusicButton.addEventListener("click", function () {
+    // 檢查是否已經顯示表單，防止重複生成
+    if (document.getElementById("music-form")) return;
+
+    // 建立表單
+    const form = document.createElement("form");
+    form.id = "music-form";
+
+    // 音樂連結輸入欄位
+    const linkInput = document.createElement("input");
+    linkInput.type = "url";//類型
+    linkInput.placeholder = "Enter music link";
+    linkInput.id = "music-link";
+    linkInput.required = true;//要求強制填寫欄位
+
+    // 音樂名稱輸入欄位
+    const nameInput = document.createElement("input");
+    nameInput.type = "text";
+    nameInput.placeholder = "Enter music name";
+    nameInput.id = "music-name";
+    nameInput.required = true;
+
+    // 提交按鈕
+    const submitButton = document.createElement("button");
+    submitButton.type = "submit";
+    submitButton.textContent = "Submit";
+
+    // 將欄位加入表單
+    form.appendChild(linkInput);
+    form.appendChild(nameInput);
+    form.appendChild(submitButton);
+
+    // 將表單插入到按鈕下方
+    addMusicButton.parentNode.insertBefore(form, addMusicButton.nextSibling);
+
+    // 表單提交事件
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); // 阻止表單的預設提交行為
+
+        // 獲取輸入值
+        const musicLink = linkInput.value.trim();
+        const musicName = nameInput.value.trim();
+
+        if (!musicLink || !musicName) {
+            alert("Please fill in all fields!");
+            return;
+        }
+
+        // 建立新的音樂項目
+        const musicItem = document.createElement("div");
+        musicItem.classList.add("music-item");
+
+        // 超連結
+        const musicAnchor = document.createElement("a");
+        musicAnchor.href = musicLink;
+        musicAnchor.target = "_blank"; // 新視窗開啟
+        musicAnchor.textContent = musicName;
+
+        // 圖片
+        const musicImage = document.createElement("img");
+        musicImage.src = "youtube.jpg"; // 替換為音樂相關圖片
+        musicImage.alt = musicName;
+        musicImage.width = 50; // 調整圖片大小
+        musicImage.height = 50;
+
+        // 新增內容到音樂項目
+        musicItem.appendChild(musicImage);
+        musicItem.appendChild(musicAnchor);
+
+        // 新增到音樂列表
+        musicList.appendChild(musicItem);
+
+        // 移除表單
+        form.remove();
+    });
+});
+
+</script>
+
+
+	
+		
+</body>
+</html>
